@@ -77,10 +77,9 @@ h2{
 }
 
 /* Media Queries */
-@media only screen and (max-width: 600px) {
+/* Media Queries */
+@media only screen and (max-width: 425px) {
     .container {
-        width: 90%;
-        
+        width: 60%;
     }
 }
-
