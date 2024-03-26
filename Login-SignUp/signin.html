@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,60 @@
     <title>SignUp</title>
     <link rel="stylesheet" href="signin.css">
 </head>
+
 <body>
     <div class="container">
         <h2>SIGNUP FORM</h2>
         <hr>
-       <form>
-           <div class="form-group">
-               <label for="firstname">Firstname</label>
-               <input type="text" id="firstname" name="firstname" required>
-           </div>
+        <form>
+            <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
 
-           <div class="form-group">
-               <label for="lastname">Lastname</label>
-               <input type="text" id="lastname" name="lastname" required>
-           </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
 
-           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <div class="form-group">
-            <label for="Password">Password</label>
-            <input type="password" id="Password" name="Password" required>
-        </div>
-           <div class="form-group">
-               <button type="submit">Signup</button>
-           </div>
-           <div>Not a member? <a href="index.html">Login now</a></div>
-       </form>
-   </div>
-    
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="check()">Signup</button>
+            </div>
+            <div>Not a member? <a href="index.html">Login now</a></div>
+        </form>
+    </div>
+
+    <script>
+        function check() {
+            var fname = document.getElementById("firstname").value;
+            var lname = document.getElementById("lastname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("Password").value;
+
+            if (fname === '' || lname === '' || email === '' || password === '') {
+                alert("Details not entered. Please provide details.");
+                return;
+            }
+
+            else {
+                alert("Sucessfully Login");
+                return;
+            }
+
+
+        }
+
+    </script>
+
 </body>
+
 </html>
