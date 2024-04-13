@@ -29,6 +29,7 @@ if ($result->num_rows > 0) {
 
      else {
         echo '<script>alert("User not found")</script>'; 
+        include('index.php');
     }
 }
 

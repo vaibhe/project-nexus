@@ -28,6 +28,7 @@ if ($stmt_check_email->num_rows > 0) {
     echo '<script>alert("Email address already exists!")</script>';
     // Handle the situation when the email already exists, you may redirect user to another page or show a message
     // For now, let's exit
+    include('index.php');
     exit();
 }
 
@@ -39,7 +40,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssss", $firstname, $lastname, $contact, $email, $password);
 
 // Hash the password
-$password = password_hash($password, PASSWORD_DEFAULT);
+// $password = password_hash($password, PASSWORD_DEFAULT);
 
 // Execute the statement
 if ($stmt->execute()) {
